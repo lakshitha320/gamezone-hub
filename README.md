@@ -1,97 +1,257 @@
-# GameZone Hub 🎮
+# 🎮 GameZone Hub
 
-GameZone Hub is a comprehensive gaming platform built for competitive gamers and enthusiasts. It offers dynamic pages for exploring top titles, tournament bracket bookings, esports team profile databases, shopping carts for merchandise, global chat rooms, discussion boards, dashboards, and admin panels.
+A modern full-stack gaming platform designed for gamers, esports communities, and tournament organizers. GameZone Hub provides game discovery, tournament management, community interaction, merchandise purchasing, and real-time engagement features through a visually immersive cyberpunk-inspired interface.
 
-Featuring a beautiful **Dark Cyberpunk UI** with neon accents, custom animations, glassmorphism, responsive navigation drawer, and an AI chat helper.
+## 🌐 Live Demo
 
----
-
-## 🚀 Key Features
-
-- **Dark Gaming UI**: Custom CSS theme pre-seeded with neon custom variables, glassmorphic layout templates, and keyframe hover animations.
-- **Dynamic Catalog Explorer**: Search and filter games by categories. Submit ratings directly, which updates the overall ratings index.
-- **Tournament Booking**: View schedules, slot capacities, active brackets, and book slots dynamically.
-- **Merchandise Shopping Cart**: Drawer cart sliding from the right, badging counts, quantity adjusters, checkout flow, and dashboard order logger.
-- **Forums & Chat Boards**: Real-time comment reply threads, topic publications, and live lobby chatroom with automated active responses.
-- **Smart Chatbot Helper**: Floating support widget capable of resolving questions on game directories, merch availability, active brackets, and support.
-- **Dual Database Core**: Automatically hooks up to MongoDB if `MONGODB_URI` is present in configuration. Otherwise, it transparently falls back to an **In-Memory database pre-seeded with mockup data**. Users can test registration, chat posting, admin addition, or order checkouts completely in memory.
+**Website:** https://gamezone-hub-lovat.vercel.app/
 
 ---
 
-## 🛠️ Project Structure
+## 📖 Overview
 
-```
+GameZone Hub is a comprehensive gaming ecosystem that combines competitive gaming tools, community features, and e-commerce capabilities into a single platform. The application offers an engaging user experience with a futuristic gaming-themed design while maintaining scalability through flexible database integration.
+
+Whether users want to discover new games, participate in tournaments, engage with gaming communities, or purchase gaming merchandise, GameZone Hub provides a seamless experience.
+
+---
+
+## ✨ Features
+
+### 🎮 Game Explorer
+
+* Browse and discover popular games
+* Search and filter by category
+* View ratings and community feedback
+* Submit game ratings and reviews
+
+### 🏆 Tournament Management
+
+* View active tournaments and schedules
+* Register for tournament brackets
+* Monitor slot availability
+* Track tournament participation
+
+### 🛒 Merchandise Store
+
+* Browse gaming merchandise
+* Add products to cart
+* Manage quantities dynamically
+* Complete checkout process
+* Track order history
+
+### 💬 Community Platform
+
+* Discussion forums
+* Thread creation and replies
+* Live gaming chat rooms
+* Community-driven interactions
+
+### 🤖 AI Support Assistant
+
+* Interactive chatbot widget
+* Instant user assistance
+* Tournament information support
+* Store and game-related guidance
+
+### 📊 Dashboard & Administration
+
+* User dashboard
+* Order tracking
+* Activity monitoring
+* Administrative analytics and management tools
+
+### 🔐 Authentication & Security
+
+* User registration and login
+* JWT-based authentication
+* Protected routes
+* Role-based access controls
+
+---
+
+## 🎨 User Interface
+
+GameZone Hub features a custom-designed gaming experience including:
+
+* Dark Cyberpunk Theme
+* Neon Accent Color System
+* Glassmorphism Components
+* Responsive Design
+* Animated UI Elements
+* Mobile-Friendly Navigation
+* Interactive Dashboard Layouts
+
+---
+
+## 🏗️ System Architecture
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6+)
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB (Production)
+* In-Memory Database Fallback (Development)
+
+### Authentication
+
+* JSON Web Tokens (JWT)
+
+### Deployment
+
+* Vercel
+
+---
+
+## 📁 Project Structure
+
+```text
 gamezone-hub/
-├── package.json          # Node dependencies and scripts
-├── server.js             # Main server entrypoint
-├── .env.example          # Sample environment variables
-├── README.md             # Project documentation
-├── public/               # Frontend Client Files
-│   ├── index.html        # Home view
-│   │   ... (other HTML pages)
+├── public/
 │   ├── css/
-│   │   └── style.css     # CSS variable design system & animations
-│   └── js/
-│       ├── script.js     # Global navbar auth, cart drawer, and chatbot
-│       └── pages.js      # Dynamic page-specific API loaders
-└── server/               # Backend Server logic
-    ├── config/
-    │   └── db.js         # Database configuration & fallback flags
-    ├── middleware/
-    │   └── auth.js       # JWT authentication middleware
-    ├── models/
-    │   └── dbWrapper.js  # Schema compilers & In-memory mockup seed database
-    └── routes/
-        ├── auth.js       # Register, Login, Profile checks
-        ├── games.js      # Games explorer catalog CRUD & ratings
-        ├── tournaments.js# Tournament schedules, registries & slots
-        ├── store.js      # Merch items and order checkout actions
-        ├── community.js  # Forum creation, thread replies, chat rooms
-        ├── admin.js      # Administration dashboards metrics aggregations
-        └── dashboard.js  # User registrations and purchase logs
+│   ├── js/
+│   └── index.html
+│
+├── server/
+│   ├── config/
+│   ├── middleware/
+│   ├── models/
+│   └── routes/
+│
+├── package.json
+├── server.js
+├── README.md
+└── .env.example
 ```
 
 ---
 
-## 💻 Local Setup & Execution
+## ⚙️ Installation
 
-### 1. Prerequisites
-Ensure you have **Node.js** installed on your system.
+### Clone Repository
 
-### 2. Install Dependencies
-Navigate to the project directory and run:
+```bash
+git clone https://github.com/your-username/gamezone-hub.git
+cd gamezone-hub
+```
+
+### Install Dependencies
+
 ```bash
 npm install
 ```
 
-### 3. Setup Environment Variables (Optional)
-Copy `.env.example` to `.env` and fill in your connection credentials:
-```bash
-cp .env.example .env
-```
-*Note: If no `.env` file exists or `MONGODB_URI` is not filled out, the server runs in fallback memory database mode.*
+### Configure Environment Variables
 
-### 4. Start Server
-Run the dev server using nodemon (auto-reloads on edits):
+Create a `.env` file:
+
+```env
+PORT=5000
+JWT_SECRET=your_secret_key
+MONGODB_URI=your_mongodb_connection_string
+```
+
+> If `MONGODB_URI` is not provided, the application automatically switches to the built-in in-memory database.
+
+### Run Development Server
+
 ```bash
 npm run dev
 ```
-Alternatively, start the server normally:
+
+### Run Production Server
+
 ```bash
 npm start
 ```
-Open **[http://localhost:5000](http://localhost:5000)** in your web browser.
+
+Application URL:
+
+```text
+http://localhost:5000
+```
 
 ---
 
-## 🔑 Pre-seeded Testing Accounts
+## 🔑 Demo Credentials
 
-Use these credentials to test user profiles and admin functionalities out of the box (valid in memory database fallback):
+### Administrator
 
-### Admin Account
-- **Username**: `admin`
-- **Password**: `admin123`
+```text
+Username: admin
+Password: admin123
+```
 
-### Standard Gamer Account
-- **Username**: `gamer1`
-- **Password**: `user123`
+### Standard User
+
+```text
+Username: gamer1
+Password: user123
+```
+
+---
+
+## 🚀 Deployment
+
+The application is deployed using Vercel for fast and scalable hosting.
+
+To deploy your own version:
+
+```bash
+vercel
+```
+
+Or connect your GitHub repository directly through the Vercel Dashboard.
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of:
+
+* Homepage
+* Game Explorer
+* Tournament Page
+* Store
+* Community Forums
+* Admin Dashboard
+
+---
+
+## 🔮 Future Enhancements
+
+* Real-time multiplayer integration
+* Matchmaking system
+* Payment gateway integration
+* Achievement and ranking system
+* User profile customization
+* Push notifications
+* Mobile application support
+
+---
+
+## 👨‍💻 Author
+
+**Lakshitha Chanaka**
+
+* LinkedIn:www.linkedin.com/in/chanaka-sadaruwan-b0b745320
+* GitHub: 
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+### Built for Gamers. Designed for Competition. 🎮🔥
