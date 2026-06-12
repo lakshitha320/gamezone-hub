@@ -140,7 +140,7 @@ gamezone-hub/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/gamezone-hub.git
+git clone https://github.com/lakshitha320/gamezone-hub.git
 cd gamezone-hub
 ```
 
@@ -244,7 +244,7 @@ Add screenshots of:
 **Lakshitha Chanaka**
 
 * LinkedIn:www.linkedin.com/in/chanaka-sadaruwan-b0b745320
-* GitHub: 
+* GitHub: https://github.com/lakshitha320/gamezone-hub.git
 
 ---
 
