@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with GameZone Hub support. Send inquiries regarding sponsorships, events, brackets, or merchandise orders.">
+  <title>Contact Us | GameZone Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .contact-info-section h3 {
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      text-shadow: var(--glow-cyan);
+      margin-bottom: 1.5rem;
+    }
+    .contact-details-list {
+      list-style: none;
+      margin-top: 2rem;
+    }
+    .contact-details-list li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+    .contact-details-list span.icon {
+      font-size: 1.8rem;
+      color: var(--neon-pink);
+      text-shadow: var(--glow-pink);
+    }
+    @media (max-width: 768px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">🎮 GAMEZONE<span>HUB</span></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="tournaments.html">Tournaments</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="cart-btn-container" id="cart-btn">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-badge" id="cart-count" style="display: none;">0</span>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN CONTACT CONTENT
+       ========================================== -->
+  <main>
+    <div class="contact-layout">
+      <!-- Info Left Column -->
+      <section class="contact-info-section">
+        <h3>Play. Compete.<br>Connect with Us.</h3>
+        <p style="color: var(--text-muted); font-size: 1.2rem;">Have questions about tournament registration rules, bulk merch shipping, player sponsorships, or server partnerships? Drop us a line and our moderators will respond within 24 hours.</p>
+        <ul class="contact-details-list">
+          <li>
+            <span class="icon">📍</span>
+            <div>
+              <h5 style="font-family: var(--font-title); font-size: 0.95rem; text-transform: uppercase; color: var(--text-muted);">HQ Location</h5>
+              <p>404 Gaming Plaza, Neon District, CA</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon">✉️</span>
+            <div>
+              <h5 style="font-family: var(--font-title); font-size: 0.95rem; text-transform: uppercase; color: var(--text-muted);">Support Mail</h5>
+              <p>support@gamezonehub.com</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon">📞</span>
+            <div>
+              <h5 style="font-family: var(--font-title); font-size: 0.95rem; text-transform: uppercase; color: var(--text-muted);">Phone</h5>
+              <p>+1 (555) 900-LOBBY</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Form Right Column -->
+      <section class="card contact-form-card" style="border-color: rgba(255, 0, 127, 0.25);">
+        <h4 style="text-transform: uppercase; font-size: 1.3rem; margin-bottom: 1.5rem; text-shadow: var(--glow-pink); color: var(--neon-pink);">Send a Message</h4>
+        <form id="contact-form" onsubmit="event.preventDefault(); showToast('Message sent! Our admins will contact you.', 'cyan'); this.reset();">
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" class="form-control" placeholder="Enter name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" class="form-control" placeholder="Enter email" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" class="form-control" placeholder="Subject description" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-msg">Message Details</label>
+            <textarea id="contact-msg" class="form-control" rows="4" placeholder="How can we help you?" required style="resize: none;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-pink" style="width: 100%;">Submit Form</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>GameZone Hub</h3>
+        <p>The premium portal for gaming and competitive esports. Discover patch updates, buy gear, participate in active brackets, and chat with team players.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn">🐦</a>
+          <a href="#" class="social-btn">💬</a>
+          <a href="#" class="social-btn">📺</a>
+          <a href="#" class="social-btn">🎮</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="games.html">Games Library</a></li>
+          <li><a href="tournaments.html">Tournament Brackets</a></li>
+          <li><a href="store.html">Merchandise Store</a></li>
+          <li><a href="community.html">Forums & Chat</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get notified about upcoming brackets and store discount drops.</p>
+        <form style="display: flex; gap: 0.5rem; margin-top: 1rem;" onsubmit="event.preventDefault(); showToast('Subscribed to newsletter!', 'cyan');">
+          <input type="email" placeholder="Your Email" class="form-control" required style="padding: 0.5rem;">
+          <button type="submit" class="btn btn-cyan" style="padding: 0.5rem 1rem;">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 GameZone Hub. All rights reserved. Play, Compete, Connect.</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       SLIDING CART DRAWER
+       ========================================== -->
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <span class="cart-close-btn" id="cart-close">&times;</span>
+    </div>
+    <div class="cart-items-container" id="cart-items">
+      <!-- Generated via JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-container">
+        <span>Subtotal:</span>
+        <span class="cart-total-price" id="cart-total">$0.00</span>
+      </div>
+      <button class="btn btn-pink cart-checkout-btn" id="cart-checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FLOATING AI CHATBOT
+       ========================================== -->
+  <div class="chatbot-container">
+    <div class="chatbot-bubble" id="chatbot-bubble">
+      <span class="chatbot-icon">🤖</span>
+    </div>
+    <div class="chatbot-window" id="chatbot-window">
+      <div class="chatbot-header">
+        <span class="chatbot-title">👾 GameZone Assistant</span>
+        <span style="cursor: pointer;" id="chatbot-close">&times;</span>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <!-- Rendered via JS -->
+      </div>
+      <form class="chatbot-input-container" id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Type a message or 'help'..." class="form-control" style="padding: 0.5rem;">
+        <button type="submit" class="btn btn-cyan" style="padding: 0.5rem 1rem;">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

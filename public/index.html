@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore games, esports tournaments, news, teams, and gaming gear at GameZone Hub – Play, Compete, Connect.">
+  <title>GameZone Hub | Play, Compete, Connect</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-icons/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">🎮 GAMEZONE<span>HUB</span></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="tournaments.html">Tournaments</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <!-- Shopping Cart Trigger -->
+        <div class="cart-btn-container" id="cart-btn">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-badge" id="cart-count" style="display: none;">0</span>
+        </div>
+        <!-- Hamburger Menu -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO BANNER
+       ========================================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">Welcome to the Ultimate Arena</div>
+      <h1>Play, Compete, Connect.</h1>
+      <p>Join tournaments, rank up on leaderboards, check out esports team lineups, discuss in the forums, and buy premium gear from the store – all inside GameZone Hub.</p>
+      <div class="hero-buttons">
+        <a href="tournaments.html" class="btn btn-pink">Enter Tournament</a>
+        <a href="games.html" class="btn btn-cyan">Explore Games</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       MAIN CONTENT
+       ========================================== -->
+  <main>
+    <!-- Core Value Cards -->
+    <section class="features-grid">
+      <div class="card feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Tournaments</h3>
+        <p>Participate in scheduled matches and claim cash prizes. Form rosters and register online.</p>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-icon">👾</div>
+        <h3>Live Leaderboards</h3>
+        <p>Test your skills, rise up in points, and claim your place among top players globally.</p>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Active Forums</h3>
+        <p>Discuss the meta, search for teammates, and interact in real time in our chat lobbies.</p>
+      </div>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section class="featured-games-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Featured Games</h2>
+          <p class="section-subtitle">Top games trending in the GameZone lobbies right now</p>
+        </div>
+        <a href="games.html" class="btn btn-cyan" style="padding: 0.5rem 1.2rem;">View All</a>
+      </div>
+      <div class="games-grid" id="featured-games-container">
+        <!-- Loaded Dynamically -->
+        <div style="text-align: center; grid-column: 1/-1; padding: 3rem;">
+          <div style="color: var(--neon-cyan);">Loading featured titles...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="latest-news-section" style="margin-top: 4rem;">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Latest Updates</h2>
+          <p class="section-subtitle">Gaming news, patch notes, and esports event coverages</p>
+        </div>
+        <a href="news.html" class="btn btn-pink" style="padding: 0.5rem 1.2rem;">View News</a>
+      </div>
+      <div class="games-grid" id="latest-news-container">
+        <!-- Loaded Dynamically -->
+        <div style="text-align: center; grid-column: 1/-1; padding: 3rem;">
+          <div style="color: var(--neon-pink);">Loading articles...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>GameZone Hub</h3>
+        <p>The premium portal for gaming and competitive esports. Discover patch updates, buy gear, participate in active brackets, and chat with team players.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn">🐦</a>
+          <a href="#" class="social-btn">💬</a>
+          <a href="#" class="social-btn">📺</a>
+          <a href="#" class="social-btn">🎮</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="games.html">Games Library</a></li>
+          <li><a href="tournaments.html">Tournament Brackets</a></li>
+          <li><a href="store.html">Merchandise Store</a></li>
+          <li><a href="community.html">Forums & Chat</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get notified about upcoming brackets and store discount drops.</p>
+        <form style="display: flex; gap: 0.5rem; margin-top: 1rem;" onsubmit="event.preventDefault(); showToast('Subscribed to newsletter!', 'cyan');">
+          <input type="email" placeholder="Your Email" class="form-control" required style="padding: 0.5rem;">
+          <button type="submit" class="btn btn-cyan" style="padding: 0.5rem 1rem;">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 GameZone Hub. All rights reserved. Play, Compete, Connect.</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       SLIDING CART DRAWER
+       ========================================== -->
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <span class="cart-close-btn" id="cart-close">&times;</span>
+    </div>
+    <div class="cart-items-container" id="cart-items">
+      <!-- Generated via JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-container">
+        <span>Subtotal:</span>
+        <span class="cart-total-price" id="cart-total">$0.00</span>
+      </div>
+      <button class="btn btn-pink cart-checkout-btn" id="cart-checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FLOATING AI CHATBOT
+       ========================================== -->
+  <div class="chatbot-container">
+    <div class="chatbot-bubble" id="chatbot-bubble">
+      <span class="chatbot-icon">🤖</span>
+    </div>
+    <div class="chatbot-window" id="chatbot-window">
+      <div class="chatbot-header">
+        <span class="chatbot-title">👾 GameZone Assistant</span>
+        <span style="cursor: pointer;" id="chatbot-close">&times;</span>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <!-- Rendered via JS -->
+      </div>
+      <form class="chatbot-input-container" id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Type a message or 'help'..." class="form-control" style="padding: 0.5rem;">
+        <button type="submit" class="btn btn-cyan" style="padding: 0.5rem 1rem;">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>
